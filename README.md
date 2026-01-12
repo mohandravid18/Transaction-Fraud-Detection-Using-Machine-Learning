@@ -40,7 +40,7 @@ Install the required packages using:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost
 
-How to Run
+##How to Run
 
     Download the dataset:
         Go to: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
@@ -58,27 +58,27 @@ python fraud_detection.py
         Saves raw and processed datasets
         Prints model performance (AUPRC scores) and business insights
 
-Key Findings
+##Key Findings
 
     Fraudulent transactions tend to have smaller amounts and occur at different times compared to normal ones.
     XGBoost typically outperforms Random Forest on AUPRC (often > 0.85).
     SMOTE effectively improves recall for the fraud class without severely hurting precision.
     Tree-based models with oversampling achieve excellent fraud detection while keeping false positives low.
 
-Evaluation Metrics (Focus)
+##Evaluation Metrics (Focus)
 
     AUPRC: Primary metric due to high class imbalance (better than ROC-AUC)
     Precision-Recall Curve: Shows trade-off between catching fraud (recall) and avoiding false alerts (precision)
     Confusion Matrix: Highlights false positives (costly) and false negatives (risky)
 
-Business Applications
+##Business Applications
 
     Real-time fraud alerting in payment systems
     Risk scoring for transactions
     Reducing manual review workload
     Deployable with custom threshold tuning based on business tolerance for false positives
 
-Future Improvements
+##Future Improvements
 
     Threshold optimization for desired precision/recall
     Feature importance analysis using SHAP values
